@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Lalezar&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  font-size: 1rem;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100px;
+}
+.humberger {
+  display: none;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex: 0 1 25%;
+}
+.logo img {
+  width: 190px;
+}
+.navbar {
+  flex: 0 1 50%;
+}
+
+.navbar ul {
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar ul li {
+  list-style-type: none;
+  font-size: 1.25rem;
+  color: #68707d;
+}
+.basket {
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 0 1 25%;
+}
+#basket_img {
+  height: 25px;
+  width: 25px;
+}
+#avatar_img {
+  height: 45px;
+  width: 45px;
+  margin-left: 25px;
+}
+.product_show {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.item_presentation {
+  flex: 0 1 33%;
+}
+.item_presentation img {
+  width: 100%;
+}
+.item_descr {
+  flex: 0 1 67%;
+}
+
+@media only screen and (max-width: 750px) {
+  .humberger {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .humberger div {
+    height: 3px;
+    width: 20px;
+    background: #68707d;
+    margin-top: 2.5px;
+  }
+  .logo {
+    flex: 0 1 85%;
+  }
+  .logo img {
+    margin: 0 auto;
+  }
+  .navbar {
+    display: none;
+  }
+  .basket {
+    padding: 0;
+    flex: 0 1 10%;
+  }
+}

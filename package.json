@@ -1,0 +1,31 @@
+{
+  "name": "product_landing_page",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "url-loader": "^4.1.1",
+    "webpack-cli": "^4.9.1"
+  },
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^3.0.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.5",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.1",
+    "webpack-dev-server": "^4.5.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server -m -c ./webpack.config.js -c ./webpack.dev.js --open",
+    "build": "webpack -m -c ./webpack.config.js -c ./webpack.prod.js"
+  },
+  "keywords": [],
+  "author": "Reda Sayah",
+  "license": "ISC"
+}
