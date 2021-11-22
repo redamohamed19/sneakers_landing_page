@@ -5,7 +5,12 @@
   box-sizing: border-box;
 }
 p {
-  font-size: 1rem;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+h1 {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+h2 {
   font-family: 'Kumbh Sans', sans-serif;
 }
 .container {
@@ -47,12 +52,12 @@ header {
 }
 .basket {
   padding-left: 50px;
-  display: flex;
   align-items: center;
   height: 100%;
   display: flex;
   flex-flow: row nowrap;
   flex: 0 1 25%;
+  justify-content: center;
 }
 #basket_img {
   height: 25px;
@@ -69,15 +74,85 @@ header {
   margin-top: 50px;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: flex-start;
 }
 .item_presentation {
+  width: 95%;
   flex: 0 1 33%;
 }
+.img_cote {
+  flex: 0 1 40%;
+}
+.img_slide {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+.img_slide img {
+  width: 20%;
+  border-radius: 20px;
+}
 .item_presentation img {
+  border-radius: 20px;
   width: 100%;
 }
 .item_descr {
-  flex: 0 1 67%;
+  flex: 0 1 60%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.item_descr h2,
+.item_descr h1,
+.item_descr p,
+.item_descr div,
+.item_descr strike {
+  margin-bottom: 25px;
+}
+.item_descr h2 {
+  font-size: 1.87rem;
+  color: #ff7d1a;
+}
+.item_descr h1 {
+  font-size: 3.12rem;
+  color: #000000;
+}
+.item_descr p {
+  font-size: 1.12rem;
+  color: #68707d;
+}
+.real_price {
+  display: flex;
+}
+.prushare {
+  display: flex;
+  height: 50px;
+}
+.counter {
+  border-radius: 20px;
+  background: #f7f8fd;
+  flex: 0 1 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.counter img {
+  cursor: pointer;
+}
+.counter input {
+  border: none;
+  text-align: center;
+  background: #f7f8fd;
+}
+.prushare button {
+  border-radius: 20px;
+  flex: 0 1 66%;
+  background: #ff7d1a;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
 }
 
 @media only screen and (max-width: 750px) {
@@ -87,11 +162,33 @@ header {
     justify-content: center;
     cursor: pointer;
   }
-  .humberger div {
+  .rec1 {
     height: 3px;
     width: 20px;
     background: #68707d;
-    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+  }
+  .rec2 {
+    height: 3px;
+    width: 20px;
+    background: #68707d;
+    margin-bottom: 2.5px;
+  }
+  .rec3 {
+    height: 3px;
+    width: 20px;
+    background: #68707d;
+    margin-bottom: 2.5px;
+  }
+  .active {
+    transform: rotate(-45deg);
+    margin-bottom: -2px;
+  }
+  .active {
+    display: none;
+  }
+  .active {
+    transform: rotate(45deg);
   }
   .logo {
     flex: 0 1 85%;
