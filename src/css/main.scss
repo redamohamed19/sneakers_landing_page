@@ -156,6 +156,12 @@ header {
 }
 
 @media only screen and (max-width: 750px) {
+  .container {
+    width: 100%;
+  }
+  header {
+    justify-content: space-evenly;
+  }
   .humberger {
     display: flex;
     flex-flow: column nowrap;
@@ -191,7 +197,7 @@ header {
     transform: rotate(45deg);
   }
   .logo {
-    flex: 0 1 85%;
+    flex: 0 1 75%;
   }
   .logo img {
     margin: 0 auto;
@@ -202,5 +208,50 @@ header {
   .basket {
     padding: 0;
     flex: 0 1 10%;
+  }
+  .product_show {
+    flex-flow: column nowrap;
+    margin: 0;
+    width: 100%;
+  }
+  .img_slide {
+    display: none;
+  }
+  .item_presentation {
+    width: 100%;
+  }
+  .item_presentation img {
+    border-radius: 0px;
+  }
+  .item_descr {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .item_descr h2 {
+    font-size: 1.125rem;
+  }
+  .item_descr h1 {
+    font-size: 1.87rem;
+  }
+  .item_descr p {
+    font-size: 1.125rem;
+  }
+  .prushare {
+    display: block;
+    height: auto;
+  }
+
+  .prushare div {
+    height: 50px;
+    border-radius: 10px;
+  }
+  .counter input {
+    width: 80%;
+  }
+  .prushare button {
+    height: 50px;
+    border-radius: 10px;
+    width: 100%;
   }
 }
