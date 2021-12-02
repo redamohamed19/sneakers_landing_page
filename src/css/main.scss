@@ -186,13 +186,15 @@ header {
   }
   header {
     justify-content: space-evenly;
+    position: relative;
   }
   .humberger {
-    padding: 5px;
+    margin-left: 15px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     cursor: pointer;
+    z-index: 3;
   }
   .rec1 {
     height: 3px;
@@ -212,6 +214,30 @@ header {
     background: #68707d;
     margin-bottom: 2.5px;
   }
+  .navbar {
+    background: white;
+    width: 60%;
+    height: 100vh;
+    position: absolute;
+    display: none;
+
+    left: 0;
+    z-index: 2;
+  }
+  .navbar ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+    height: 70%;
+    margin-top: 30%;
+  }
+  .navbar ul li {
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
   .active {
     transform: rotate(-45deg);
     margin-bottom: -2px;
@@ -228,9 +254,7 @@ header {
   .logo img {
     margin: 0 auto;
   }
-  .navbar {
-    display: none;
-  }
+
   .basket {
     padding: 0;
     flex: 0 1 10%;
@@ -284,6 +308,7 @@ header {
     border-radius: 10px;
     width: 100%;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
   #button_svg {
     color: white;
