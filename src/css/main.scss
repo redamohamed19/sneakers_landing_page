@@ -214,16 +214,42 @@ header {
     background: #68707d;
     margin-bottom: 2.5px;
   }
+  .close_navbar {
+    animation: closenavbar 1s 1;
+    left: -500px;
+  }
+  .open_navbar {
+    animation: opennavbar 1s 1;
+    left: 0;
+  }
+
   .navbar {
     background: white;
     width: 60%;
     height: 100vh;
     position: absolute;
-    display: none;
-
-    left: 0;
+    display: block;
     z-index: 2;
   }
+
+  @keyframes opennavbar {
+    from {
+      transform: translate(-450px);
+    }
+    to {
+      transform: translate(-0);
+    }
+  }
+
+  @keyframes closenavbar {
+    from {
+      transform: translate(-0);
+    }
+    to {
+      left: -450px;
+    }
+  }
+
   .navbar ul {
     flex-direction: column;
     justify-content: flex-start;

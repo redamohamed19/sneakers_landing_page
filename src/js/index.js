@@ -9,3 +9,7 @@ document.getElementById('down').onclick = function() {
     document.getElementById('qty').value--;
   }
 };
+document.querySelector('.humberger').onclick = function() {
+  document.querySelector('.navbar').classList.toggle('open_navbar');
+  document.querySelector('.navbar').classList.toggle('close_navbar');
+};
