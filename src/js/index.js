@@ -13,3 +13,14 @@ document.querySelector('.humberger').onclick = function() {
   document.querySelector('.navbar').classList.toggle('open_navbar');
   document.querySelector('.navbar').classList.toggle('close_navbar');
 };
+var showed = false;
+document.querySelector('.basket').onclick = function() {
+  console.log(showed);
+  if (!showed) {
+    document.querySelector('.cart').style.display = 'flex';
+    showed = true;
+  } else {
+    document.querySelector('.cart').style.display = 'none';
+    showed = false;
+  }
+};
