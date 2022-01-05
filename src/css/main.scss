@@ -335,9 +335,15 @@ header {
   }
 
   .basket {
+    position: relative;
     padding: 0;
     flex: 0 1 10%;
     padding-right: 5px;
+  }
+  .cart {
+    width: 95vw;
+    right: 0;
+    height: auto + 500px;
   }
   .product_show {
     flex-flow: column nowrap;
