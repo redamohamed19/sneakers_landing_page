@@ -14,8 +14,8 @@ document.querySelector('.humberger').onclick = function() {
   document.querySelector('.navbar').classList.toggle('close_navbar');
 };
 var showed = false;
+setBasket();
 document.querySelector('.basket').onclick = function() {
-  console.log(showed);
   if (!showed) {
     document.querySelector('.cart').style.display = 'flex';
     showed = true;
@@ -24,3 +24,26 @@ document.querySelector('.basket').onclick = function() {
     showed = false;
   }
 };
+
+document.getElementById('submit').onclick = function() {
+  setBasket();
+};
+document.getElementById('delete').onclick = function() {
+  document.getElementById('qty').value = 0;
+  setBasket();
+};
+
+function setBasket() {
+  var qtyprushared = document.getElementById('qty').value;
+  var totalprice = qtyprushared * 125;
+  totalprice += ' $';
+  document.getElementById('itemqty').textContent = qtyprushared;
+  document.getElementById('card_total_price').textContent = totalprice;
+  if (qtyprushared == 0) {
+    document.getElementById('empty').style.display = 'flex';
+    document.getElementById('items').style.display = 'none';
+  } else {
+    document.getElementById('empty').style.display = 'none';
+    document.getElementById('items').style.display = 'flex';
+  }
+}

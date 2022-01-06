@@ -30,17 +30,20 @@
           <div class="cart">
             <div class="cartheader">
               <h3>Cart</h3>
-              <img src="./imgs/icon-delete.svg" alt="delete" />
+              <img src="./imgs/icon-delete.svg" alt="delete" id="delete" />
             </div>
             <br />
             <hr />
-            <div class="items">
+            <div class="items" id="items">
               <img src="./imgs/image-product-1-thumbnail.jpg" alt="" />
               <p>
                 Fall Limited Edition Sneakers <br />
-                125.00 x <span>3</span>
+                125.00 x <span id="itemqty">3</span>
                 <span id="card_total_price"> $375.00</span>
               </p>
+            </div>
+            <div class="empty" id="empty">
+              <h3>"Your basket is empty"</h3>
             </div>
             <button>Checkout</button>
           </div>
@@ -77,10 +80,12 @@
           <div class="prushare">
             <div class="counter">
               <img src="./imgs/icon-minus.svg" alt="" id="down" />
-              <input type="number" value="1" id="qty" />
+              <input type="number" value="0" id="qty" />
               <img src="./imgs/icon-plus.svg" alt="" id="up" />
             </div>
-            <button><img src="./imgs/icon-cart.svg" />Add to cart</button>
+            <button id="submit">
+              <img src="./imgs/icon-cart.svg" />Add to cart
+            </button>
           </div>
         </div>
       </section>
