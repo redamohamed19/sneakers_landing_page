@@ -37,12 +37,15 @@ function setBasket() {
   var qtyprushared = document.getElementById('qty').value;
   var totalprice = qtyprushared * 125;
   totalprice += ' $';
+  document.getElementById('item_in_basket').textContent = qtyprushared;
   document.getElementById('itemqty').textContent = qtyprushared;
   document.getElementById('card_total_price').textContent = totalprice;
   if (qtyprushared == 0) {
+    document.getElementById('item_in_basket').style.display = 'none';
     document.getElementById('empty').style.display = 'flex';
     document.getElementById('items').style.display = 'none';
   } else {
+    document.getElementById('item_in_basket').style.display = 'block';
     document.getElementById('empty').style.display = 'none';
     document.getElementById('items').style.display = 'flex';
   }
