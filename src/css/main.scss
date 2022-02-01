@@ -13,6 +13,41 @@ h1 {
 h2 {
   font-family: 'Kumbh Sans', sans-serif;
 }
+body {
+  position: relative;
+}
+.center {
+  display: none;
+  justify-content: center;
+}
+.img_viewer {
+  position: absolute;
+  top: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#full_screen {
+  height: 700px;
+  border-radius: 18px;
+}
+.img_move {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#less {
+  margin-right: -20px;
+  z-index: 3;
+}
+#more {
+  margin-left: -20px;
+  transform: rotate(180deg);
+}
+.close_img_viewer {
+  font-size: 50px;
+  font-weight: bold;
+}
 .container {
   width: 80%;
   margin: 0 auto;

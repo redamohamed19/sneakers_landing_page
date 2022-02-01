@@ -1,52 +1,37 @@
 import '../css/main.scss';
+import basket from './basket';
+
 __webpack_public_path__ = '/some-custom-public-path';
 
-document.getElementById('up').onclick = function() {
-  document.getElementById('qty').value++;
-};
-document.getElementById('down').onclick = function() {
-  if (document.getElementById('qty').value > 0) {
-    document.getElementById('qty').value--;
-  }
-};
-document.querySelector('.humberger').onclick = function() {
-  document.querySelector('.navbar').classList.toggle('open_navbar');
-  document.querySelector('.navbar').classList.toggle('close_navbar');
-};
-var showed = false;
-setBasket();
-document.querySelector('.basket').onclick = function() {
-  if (!showed) {
-    document.querySelector('.cart').style.display = 'flex';
-    showed = true;
-  } else {
-    document.querySelector('.cart').style.display = 'none';
-    showed = false;
-  }
+basket();
+document.getElementById('img1').onclick = function() {
+  document.getElementById('center').style.display = 'flex';
+  document.getElementById('container').style.opacity = '0.2';
 };
 
-document.getElementById('submit').onclick = function() {
-  setBasket();
-};
-document.getElementById('delete').onclick = function() {
-  document.getElementById('qty').value = 0;
-  setBasket();
+document.getElementById('close').onclick = function() {
+  document.getElementById('center').style.display = 'none';
+  document.getElementById('container').style.opacity = '1';
 };
 
-function setBasket() {
-  var qtyprushared = document.getElementById('qty').value;
-  var totalprice = qtyprushared * 125;
-  totalprice += ' $';
-  document.getElementById('item_in_basket').textContent = qtyprushared;
-  document.getElementById('itemqty').textContent = qtyprushared;
-  document.getElementById('card_total_price').textContent = totalprice;
-  if (qtyprushared == 0) {
-    document.getElementById('item_in_basket').style.display = 'none';
-    document.getElementById('empty').style.display = 'flex';
-    document.getElementById('items').style.display = 'none';
-  } else {
-    document.getElementById('item_in_basket').style.display = 'block';
-    document.getElementById('empty').style.display = 'none';
-    document.getElementById('items').style.display = 'flex';
-  }
-}
+var imgs = [
+  '520cc50bd13955f55cb2.jpg',
+  'c8bb0aaccecdebb16596.jpg',
+  'af5c71ba9ffcc0b8b54d.jpg',
+  '9962862ef3eff6d65e5b.jpg'
+];
+var state = 0;
+//document.getElementById('full_screen').src = imgs[state];
+
+document.getElementById('more').onclick = function() {
+  state++;
+  state = state % imgs.length;
+  document.getElementById('full_screen').src = imgs[state];
+};
+document.getElementById('less').onclick = function() {
+  console.log(state);
+  state--;
+  state < 0 ? (state = 3) : state;
+
+  document.getElementById('full_screen').src = imgs[state];
+};
