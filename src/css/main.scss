@@ -39,10 +39,12 @@ body {
 #less {
   margin-right: -20px;
   z-index: 3;
+  cursor: pointer;
 }
 #more {
   margin-left: -20px;
   transform: rotate(180deg);
+  cursor: pointer;
 }
 .close_img_viewer {
   font-size: 50px;
@@ -194,6 +196,10 @@ header {
 .img_cote {
   flex: 0 1 45%;
 }
+#res_less,
+#res_more {
+  display: none;
+}
 .img_slide {
   margin-top: 20px;
   display: flex;
@@ -208,7 +214,7 @@ header {
   opacity: 50%;
   border: 4px #ff5403 solid;
 }
-.item_presentation img {
+#img1 {
   border-radius: 20px;
   width: 100%;
 }
@@ -414,7 +420,21 @@ header {
   .item_presentation {
     width: 100%;
   }
-  .item_presentation img {
+  #res_less,
+  #res_more {
+    display: block;
+  }
+  #res_less {
+    position: absolute;
+    top: 30%;
+  }
+  #res_more {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    transform: rotate(180deg);
+  }
+  #img1 {
     border-radius: 0px;
   }
   .item_descr {
@@ -455,5 +475,8 @@ header {
   }
   #button_svg {
     color: white;
+  }
+  #img1 {
+    pointer-events: none;
   }
 }

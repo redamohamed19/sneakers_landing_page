@@ -1,5 +1,9 @@
 import '../css/main.scss';
 import basket from './basket';
+import img from '../imgs/image-product-1.jpg';
+import img2 from '../imgs/image-product-2.jpg';
+import img3 from '../imgs/image-product-3.jpg';
+import img4 from '../imgs/image-product-4.jpg';
 
 __webpack_public_path__ = '/some-custom-public-path';
 
@@ -14,16 +18,12 @@ document.getElementById('close').onclick = function() {
   document.getElementById('container').style.opacity = '1';
 };
 
-var imgs = [
-  '520cc50bd13955f55cb2.jpg',
-  'c8bb0aaccecdebb16596.jpg',
-  'af5c71ba9ffcc0b8b54d.jpg',
-  '9962862ef3eff6d65e5b.jpg'
-];
+var imgs = [img, img2, img3, img4];
 var state = 0;
-//document.getElementById('full_screen').src = imgs[state];
+document.getElementById('full_screen').src = imgs[state];
 
 document.getElementById('more').onclick = function() {
+  console.log(state);
   state++;
   state = state % imgs.length;
   document.getElementById('full_screen').src = imgs[state];
@@ -33,5 +33,22 @@ document.getElementById('less').onclick = function() {
   state--;
   state < 0 ? (state = 3) : state;
 
+  document.getElementById('full_screen').src = imgs[state];
+};
+
+document.getElementById('thumbnail3').onclick = function() {
+  state = +document.getElementById('thumbnail3').getAttribute('index');
+  document.getElementById('full_screen').src = imgs[state];
+};
+document.getElementById('thumbnail2').onclick = function() {
+  state = +document.getElementById('thumbnail2').getAttribute('index');
+  document.getElementById('full_screen').src = imgs[state];
+};
+document.getElementById('thumbnail1').onclick = function() {
+  state = +document.getElementById('thumbnail1').getAttribute('index');
+  document.getElementById('full_screen').src = imgs[state];
+};
+document.getElementById('thumbnail4').onclick = function() {
+  state = +document.getElementById('thumbnail4').getAttribute('index');
   document.getElementById('full_screen').src = imgs[state];
 };
