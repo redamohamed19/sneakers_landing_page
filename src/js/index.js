@@ -52,3 +52,21 @@ document.getElementById('thumbnail4').onclick = function() {
   state = +document.getElementById('thumbnail4').getAttribute('index');
   document.getElementById('full_screen').src = imgs[state];
 };
+
+var imgs1 = [img, img2, img3, img4];
+var state1 = 0;
+document.getElementById('img1').src = imgs1[state1];
+
+document.getElementById('res_less').onclick = function() {
+  console.log(state1);
+  state1--;
+  state1 < 0 ? (state1 = 3) : state1;
+
+  document.getElementById('img1').src = imgs1[state1];
+};
+document.getElementById('res_more').onclick = function() {
+  console.log(state1);
+  state1++;
+  state1 = state1 % imgs1.length;
+  document.getElementById('img1').src = imgs1[state1];
+};
